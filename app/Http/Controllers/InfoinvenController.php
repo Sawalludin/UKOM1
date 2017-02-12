@@ -10,6 +10,7 @@ use App\User;
 use App\ProdukMasuk;
 use App\ProdukKeluar;
 use App\ProdukPinjaman;
+use PDF;
 
 
 class InfoinvenController extends Controller {
@@ -325,6 +326,22 @@ public function tambahprodukpinjaman()
 
 		}
 //-----
+
+		//------ Report
+		public function reportmasuk($id)
+		{
+			$data = array('data'=>ProdukMasuk::find($id));
+			$pdf = PDF::loadView('infoinven.masuk.reportproduk', $data);
+			return $pdf->download('invoice.pdf');
+		}
+		// ---------
+
+
+
+
+
+
+
 	public function profile()
 	{
 		return view('infoinven.profile');

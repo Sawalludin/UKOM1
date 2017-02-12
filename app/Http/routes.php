@@ -33,6 +33,7 @@ Route::get('list/produk/masuk/edit/{id}', 'InfoinvenController@listprodukmasuked
 Route::post('list/produk/masuk/edit/update', 'InfoinvenController@listprodukmasukupdate');
 Route::get('tambah/produk/masuk', 'InfoinvenController@tambahprodukmasuk');
 Route::post('tambah/produk/masuk/save', 'InfoinvenController@tambahprodukmasuksave');
+Route::get('list/produk/masuk/report/{id}','InfoinvenController@reportmasuk');
 
 
 Route::get('list/produk/keluar', 'InfoinvenController@listprodukkeluar');

@@ -1,5 +1,9 @@
 <?php namespace App\Http\Controllers;
+ 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
+use Illuminate\Http\Request;
 use DB;
 use App\ProdukMasuk;
 use App\User;
@@ -46,10 +50,16 @@ class HomeController extends Controller {
 		return view('infoinven.home')->with('users', $users)->with('users2',$users2)->with('produk_masuks',$produk_masuks)->with('produk_pinjamen',$produk_pinjamen )->with('produk_keluars',$produk_keluars);
 	}
 
-	public function listprodukguest()
+	public function listprodukguest(Request $n)
 	{	
-		$data = array('data'=>ProdukMasuk::all());
-		return view('infoinven.listprodukguest')->with($data);
+	if($n->input('cari')){
+			$data = array('data'=>ProdukMasuk::where('kode','LIKE', '%'.$n->input('cari').'%')->orWhere('nama_produk','LIKE','%'.$n->input('cari').'%')->get());
+		}
+		else{
+			$data = array('data'=>ProdukMasuk::all());
+
+		}
+		return view('infoinven.listprodukguest')->with($data);	
 	}
 
 	public function hubungiadmin()

@@ -48,6 +48,7 @@
                                             <td>{{ $post->stok }}</td>
                                             <td>{{ $post->created_at }}</td>
                                             <td><a class="btn btn-info" href="{{ url('/list/produk/masuk/detail/'.$post->id) }}">Detail</a></td>
+                                            <td><a class="btn btn-info" href="{{ url('/list/produk/masuk/report/'.$post->id) }}">Report</a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

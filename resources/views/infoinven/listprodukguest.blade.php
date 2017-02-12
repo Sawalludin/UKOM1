@@ -21,6 +21,11 @@
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">List Produk</div>
+					<form method="GET">
+					<div style="float:right;">
+						<input placeholder="Nama Barang" type="text" name="cari">			
+						<button>Cari</button>
+					</div>
 					<div class="panel-body">
 						<table data-toggle="table" id="table-style"  data-row-style="rowStyle">
 						    <thead>

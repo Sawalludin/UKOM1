@@ -25,8 +25,6 @@
 					<div style="float:right;">
 						<input placeholder="Cari Kode Atau Nama " type="text" name="cari">			
 						<button>Cari</button>
-						
-								</div>
 					</div>
 					<div class="panel-body">
 						<table data-toggle="table" id="table-style"  data-row-style="rowStyle">
