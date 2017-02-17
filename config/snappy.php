@@ -13,7 +13,7 @@ return array(
     ),
     'image' => array(
         'enabled' => true,
-        'binary'  => '/usr/local/bin/wkhtmltoimage',
+        'binary'  => 'C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage',
         'timeout' => false,
         'options' => array(),
         'env'     => array(),

@@ -333,7 +333,7 @@ public function tambahprodukpinjaman()
 			$data = array('data'=>ProdukMasuk::find($id));
 			$pdf = PDF::loadView('infoinven.masuk.reportproduk', $data);
 			return $pdf->download('invoice.pdf');
-		}
+		}	
 		// ---------
 
 
